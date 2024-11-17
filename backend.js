@@ -6,7 +6,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, { pingInterval: 2000, pingTimeout: 6000 });
 
-const port = process.env.PORT||3000;
+const PORT = process.env.PORT||3000;
 const backendPlayers = {};
 const backendProjectiles = {};
 let projectileId = 0;
