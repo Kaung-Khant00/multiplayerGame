@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KK gaming</title>
+    <style>
+        canvas {
+          width: 100%;
+          height: 100%;
+        }
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      .login{
+        position: absolute;
+        width: 100dvw;
+        height: 100dvh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login_container{
+        width: 80%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+      }
+      .login_container button{
+        padding: 5px 10px;
+        border-radius: 10px;
+        background:linear-gradient(40deg,blue,rgb(0, 140, 255)) ;
+      }
+      .login_container input{
+        padding: 5px;
+        border-radius: 10px;
+        color: gray;
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: absolute;top: 0;left: 0;color: white;">Leader Board
+      <div class="scoreBoard"></div>
+    </div>
+    <div class="login">
+      <div class="login_container">
+        <input class="login_input" type="text" placeholder="Your name ...">
+        <button class="start_button">Start</button>
+      </div>
+    </div>
+    <canvas></canvas>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="./code/projectiles.js"></script>
+  <script src="./frontend.js"></script>
+</html>
