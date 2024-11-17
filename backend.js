@@ -6,7 +6,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, { pingInterval: 2000, pingTimeout: 6000 });
 
-const port = 3000;
+const port = process.env.PORT||3000;
 const backendPlayers = {};
 const backendProjectiles = {};
 let projectileId = 0;
@@ -107,6 +107,6 @@ io.on("connection", (socket) => {
     io.emit("updateplayer", backendPlayers);
   });
 });
-server.listen(port, () => {
+server.listen(PORT, () => {
   console.log(`server is running on port ${port}!`);
 });
